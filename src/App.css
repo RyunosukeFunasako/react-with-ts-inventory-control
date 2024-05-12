@@ -2,37 +2,81 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* フォームコンテナーのスタイリング */
+form {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 入力フィールドのスタイリング */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* ラベルのスタイリング */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ボタンのスタイリング */
+input[type="submit"],
+button {
+  background-color: #4CAF50; /* 緑色の背景 */
   color: white;
+  padding: 8px 16px;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"]:hover,
+button:hover {
+  background-color: #45a049; /* ホバー時に少し暗く */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* エラーメッセージのスタイリング */
+.error {
+  color: #ff0000; /* 赤色でエラーメッセージを表示 */
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* 在庫リストのスタイル調整 */
+.inventory {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px; /* 最大幅を設定 */
+}
+
+.inventory li {
+  display: flex;
+  align-items: center; /* 項目を垂直方向に中央揃え */
+  justify-content: space-between; /* 項目を水平方向に均等に配置 */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.inventory li > p {
+  margin: 0 10px; /* 左右の余白を設定 */
+  flex: 1; /* 各項目が同じ比率で空間を取るように設定 */
+  text-align: center; /* テキストを中央揃え */
 }
